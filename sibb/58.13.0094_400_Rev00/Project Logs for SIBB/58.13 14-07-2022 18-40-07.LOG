@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=BLE_RX Pin=CN1-1
+Removed Pin From Net: NetName=BLE_TX Pin=CN1-6
+Change Component Footprint: Designator=C23 Old Footprint=02013D103KAT2A New Footprint=0201
+Change Component Footprint: Designator=R24 Old Footprint=CRCW020147K0FNED New Footprint=0201
+Added Component: Designator=R25(0201)
+Add component (AddParameter): Name = "Value"; Value = "100k"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=BLE_TX Pin=CN1-1
+Added Pin To Net: NetName=BLE_RX Pin=CN1-6
+Added Pin To Net: NetName=3V3 Pin=R25-1
+Added Pin To Net: NetName=MCU_NRST Pin=R25-2
+Added Member To Class: ClassName=Main Member=Component R25 Adicionado

@@ -1,0 +1,39 @@
+Removed Pin From Net: NetName=3V3 Pin=U1-4
+Removed Pin From Net: NetName=3V3 Pin=U1-20
+Added Component: Designator=C24(0201)
+Added Component: Designator=S1(PUSH_BUTTON)
+Add component (AddParameter): Name = "Bounce time (MAX)"; Value = "10ms"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Tactile Switches"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.mouser.com/datasheet/2/60/pts540-1841856.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Mouser Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.mouser.com/ProductDetail/CK/PTS540JK035SMTRLFS?qs=nsc5Ve2%252BdoHscnqTjIh87g%3D%3D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "50mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Library Control - Checked Footprint"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Library Control - Checked Schematic"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Library Control - Last Project that Used"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Library Control - Person that Checked Footprint"; Value = "Nícolas"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Library Control - Person that Checked Schematic"; Value = "Nícolas"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Library Control - Person that did the Last Update Footprint"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Library Control - Person that did the Last Update Schematic"; Value = "Nícolas"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Library Ref"; Value = "Diversos"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "C&K Switches"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Force"; Value = "230gf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Straight"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "PTS540JK035SMTRLFS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0,18, 10=0,174, 100=0,15, 500=0,122, 1000=0,103 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "611-PTS540JK035SMTRL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Switch Function"; Value = "Off-On"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Throw Configuration"; Value = "SPST"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "12V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C24-1
+Added Pin To Net: NetName=MCU_NRST Pin=C24-2
+Added Pin To Net: NetName=GND Pin=S1-1
+Added Pin To Net: NetName=GND Pin=S1-1
+Added Pin To Net: NetName=MCU_NRST Pin=S1-2
+Added Pin To Net: NetName=MCU_NRST Pin=S1-2
+Added Pin To Net: NetName=VIN Pin=U1-4
+Added Pin To Net: NetName=VIN Pin=U1-20
+Added Member To Class: ClassName=Main Member=Component C24 Adicionado
+Added Member To Class: ClassName=Main Member=Component S1 Adicionado

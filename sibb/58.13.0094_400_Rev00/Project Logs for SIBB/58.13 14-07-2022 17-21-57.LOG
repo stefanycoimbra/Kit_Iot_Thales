@@ -1,0 +1,73 @@
+Removed Pin From Net: NetName=GND Pin=ANT2-1
+Removed Pin From Net: NetName=GND Pin=ANT2-2
+Removed Pin From Net: NetName=GND Pin=ANT2-3
+Removed Pin From Net: NetName=GND Pin=ANT2-4
+Removed Pin From Net: NetName=GND Pin=ANT2-5
+Removed Pin From Net: NetName=GND Pin=ANT2-6
+Removed Pin From Net: NetName=GND Pin=ANT2-7
+Removed Pin From Net: NetName=GND Pin=ANT2-9
+Change component parameters: Designator = "ANT2" ("ANT2"); Footprint = "50.42.0045"; UniqueID = "\YCGBLUNT\FRVONJMK" ("\YCGBLUNT\FRVONJMK")
+Change component parameters: Designator = "C1" ("C1"); Footprint = "16.23.0333"; UniqueID = "\UMJXVBJU\OSEXUOLJ" ("\UMJXVBJU\OSEXUOLJ")
+Change component parameters: Designator = "C2" ("C2"); Footprint = "16.23.0333"; UniqueID = "\UMJXVBJU\ASUSYJSN" ("\UMJXVBJU\ASUSYJSN")
+Change component parameters: Designator = "C3" ("C3"); Footprint = "16.23.0333"; UniqueID = "\UMJXVBJU\RTSGMGVR" ("\UMJXVBJU\RTSGMGVR")
+Change component parameters: Designator = "C4" ("C4"); Footprint = "16.23.0334"; UniqueID = "\UHYYOVAS\AYPJZKGU" ("\UHYYOVAS\AYPJZKGU")
+Change component parameters: Designator = "C6" ("C6"); Footprint = "16.23.0156"; UniqueID = "\UHYYOVAS\EQKAVWPU" ("\UHYYOVAS\EQKAVWPU")
+Change component parameters: Designator = "C11" ("C11"); Footprint = "16.23.0803"; UniqueID = "\HCLBTHMX\LLFPWVOV" ("\HCLBTHMX\LLFPWVOV")
+Change component parameters: Designator = "C13" ("C13"); Footprint = "16.23.0803"; UniqueID = "\BTEPPOGV\NAAUEZWM" ("\BTEPPOGV\NAAUEZWM")
+Change component parameters: Designator = "C15" ("C15"); Footprint = "16.23.0428"; UniqueID = "\PTGOHEAA\PJRHDHEH" ("\PTGOHEAA\PJRHDHEH")
+Change component parameters: Designator = "C16" ("C16"); Footprint = "16.23.0428"; UniqueID = "\PTGOHEAA\GPZOUHMC" ("\PTGOHEAA\GPZOUHMC")
+Change component parameters: Designator = "C17" ("C17"); Footprint = "16.23.0428"; UniqueID = "\PTGOHEAA\EAQTUULO" ("\PTGOHEAA\EAQTUULO")
+Change component parameters: Designator = "C22" ("C22"); Footprint = "16.23.0427"; UniqueID = "\PTGOHEAA\UOJRIBRI" ("\PTGOHEAA\UOJRIBRI")
+Change component parameters: Designator = "CN1" ("CN1"); Footprint = "28.14.0551"; UniqueID = "\ROYENWHF\KDLZCOUN" ("\ROYENWHF\KDLZCOUN")
+Change component parameters: Designator = "CN2" ("CN2"); Footprint = "28.14.0551"; UniqueID = "\ROYENWHF\YOYMPIGT" ("\ROYENWHF\YOYMPIGT")
+Change component parameters: Designator = "CN3" ("CN3"); Footprint = "28.14.0551"; UniqueID = "\ROYENWHF\NYNCJWNQ" ("\ROYENWHF\NYNCJWNQ")
+Change component parameters: Designator = "CN4" ("CN4"); Footprint = "28.14.0551"; UniqueID = "\ROYENWHF\XGHBAAYP" ("\ROYENWHF\XGHBAAYP")
+Change component parameters: Designator = "CN6" ("CN6"); Footprint = "28.14.0552"; UniqueID = "\LEHWHFFH" ("\LEHWHFFH")
+Change component parameters: Designator = "CN7" ("CN7"); Footprint = "28.14.0552"; UniqueID = "\HWKCIJGF" ("\HWKCIJGF")
+Change component parameters: Designator = "CN8" ("CN8"); Footprint = "28.14.0552"; UniqueID = "\QZQVRMJF" ("\QZQVRMJF")
+Change component parameters: Designator = "CN9" ("CN9"); Footprint = "28.14.0552"; UniqueID = "\SWWOTVWU" ("\SWWOTVWU")
+Change component parameters: Designator = "D1" ("D1"); Footprint = "32.27.0043"; UniqueID = "\HCLBTHMX\YBEKGPMA" ("\HCLBTHMX\YBEKGPMA")
+Change component parameters: Designator = "D1O" ("D1O"); Footprint = "32.17.0022"; UniqueID = "\TJUJERSJ\CZHVPSWE" ("\TJUJERSJ\CZHVPSWE")
+Change component parameters: Designator = "D2" ("D2"); Footprint = "32.17.0022"; UniqueID = "\TJUJERSJ\BWCLURSE" ("\TJUJERSJ\BWCLURSE")
+Change component parameters: Designator = "D3" ("D3"); Footprint = "32.17.0022"; UniqueID = "\TJUJERSJ\UCGVZLTM" ("\TJUJERSJ\UCGVZLTM")
+Change component parameters: Designator = "D4" ("D4"); Footprint = "32.17.0022"; UniqueID = "\TJUJERSJ\ANCLKXBW" ("\TJUJERSJ\ANCLKXBW")
+Change component parameters: Designator = "D5" ("D5"); Footprint = "32.17.0022"; UniqueID = "\TJUJERSJ\RSXOCXSI" ("\TJUJERSJ\RSXOCXSI")
+Change component parameters: Designator = "D6" ("D6"); Footprint = "32.17.0022"; UniqueID = "\TJUJERSJ\YXMOEOAF" ("\TJUJERSJ\YXMOEOAF")
+Change component parameters: Designator = "D7" ("D7"); Footprint = "32.17.0022"; UniqueID = "\TJUJERSJ\FAXUFYFL" ("\TJUJERSJ\FAXUFYFL")
+Change component parameters: Designator = "D8" ("D8"); Footprint = "32.17.0022"; UniqueID = "\TJUJERSJ\SIGGGFWW" ("\TJUJERSJ\SIGGGFWW")
+Change component parameters: Designator = "D9" ("D9"); Footprint = "32.17.0022"; UniqueID = "\TJUJERSJ\UFILHNIE" ("\TJUJERSJ\UFILHNIE")
+Change component parameters: Designator = "D11" ("D11"); Footprint = "32.17.0022"; UniqueID = "\TJUJERSJ\KUCNIIKF" ("\TJUJERSJ\KUCNIIKF")
+Change component parameters: Designator = "D12" ("D12"); Footprint = "32.17.0022"; UniqueID = "\TJUJERSJ\IVNVWACL" ("\TJUJERSJ\IVNVWACL")
+Change component parameters: Designator = "D13" ("D13"); Footprint = "32.27.0043"; UniqueID = "\BTEPPOGV\HQTUMBRN" ("\BTEPPOGV\HQTUMBRN")
+Change component parameters: Designator = "J4" ("J4"); Footprint = "70.11.0083"; UniqueID = "\CGSRIFXO" ("\CGSRIFXO")
+Change component parameters: Designator = "J5" ("J5"); Footprint = "70.11.0010"; UniqueID = "\PTGOHEAA\OPXZYZGA" ("\PTGOHEAA\OPXZYZGA")
+Change component parameters: Designator = "J6" ("J6"); Footprint = "70.11.0010"; UniqueID = "\PTGOHEAA\VZYKGZAM" ("\PTGOHEAA\VZYKGZAM")
+Change component parameters: Designator = "Q1" ("Q1"); Footprint = "72.19.0021"; UniqueID = "\TJUJERSJ\UEALXFHU" ("\TJUJERSJ\UEALXFHU")
+Change component parameters: Designator = "Q2" ("Q2"); Footprint = "72.19.0021"; UniqueID = "\TJUJERSJ\QMKLBGGM" ("\TJUJERSJ\QMKLBGGM")
+Change component parameters: Designator = "Q3" ("Q3"); Footprint = "72.19.0021"; UniqueID = "\TJUJERSJ\NHODHUND" ("\TJUJERSJ\NHODHUND")
+Change component parameters: Designator = "Q4" ("Q4"); Footprint = "72.19.0021"; UniqueID = "\TJUJERSJ\ZEAWYBSY" ("\TJUJERSJ\ZEAWYBSY")
+Change component parameters: Designator = "Q5" ("Q5"); Footprint = "72.19.0021"; UniqueID = "\TJUJERSJ\PKEZEMVQ" ("\TJUJERSJ\PKEZEMVQ")
+Change component parameters: Designator = "Q6" ("Q6"); Footprint = "72.19.0071"; UniqueID = "\TJUJERSJ\OIIQMJEH" ("\TJUJERSJ\OIIQMJEH")
+Change component parameters: Designator = "Q7" ("Q7"); Footprint = "72.19.0071"; UniqueID = "\TJUJERSJ\TWVNURUQ" ("\TJUJERSJ\TWVNURUQ")
+Change component parameters: Designator = "Q8" ("Q8"); Footprint = "72.19.0071"; UniqueID = "\TJUJERSJ\SATQCNGW" ("\TJUJERSJ\SATQCNGW")
+Change component parameters: Designator = "Q9" ("Q9"); Footprint = "72.19.0071"; UniqueID = "\TJUJERSJ\GATQEURV" ("\TJUJERSJ\GATQEURV")
+Change component parameters: Designator = "Q10" ("Q10"); Footprint = "72.19.0021"; UniqueID = "\PTGOHEAA\CZHYMFQH" ("\PTGOHEAA\CZHYMFQH")
+Change Net Name : Old Net Name=I2C1_SCL New Net Name=I2C1_CLK
+Change Net Name : Old Net Name=I2C1_SDA New Net Name=I2C1_DAT
+Change Net Name : Old Net Name=MCU_ PA0 New Net Name=LED1
+Change Net Name : Old Net Name=MCU_ PA1 New Net Name=LED2
+Change Net Name : Old Net Name=MCU_PA8 New Net Name=LED3
+Change Net Name : Old Net Name=MCU_PA11 New Net Name=LED4
+Change Net Name : Old Net Name=MCU_PA12 New Net Name=LED5
+Added Pin To Net: NetName=NetC23_2 Pin=IC3-19
+Added Pin To Net: NetName=NetC23_2 Pin=J1-12
+Added Net: Name=NetC23_2
+Added Room: Name=Antennas
+Added Room: Name=Bluetooth
+Added Room: Name=Designator
+Added Room: Name=EXS82USB
+Added Room: Name=Interfaces
+Added Room: Name=LEDs
+Added Room: Name=Main
+Added Room: Name=Sensors
+Added Room: Name=USB
