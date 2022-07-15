@@ -1,0 +1,55 @@
+Protel Design System Design Rule Check
+PCB File : D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc
+Date     : 15/07/2022
+Time     : 00:07:38
+
+Processing Rule : Clearance Constraint (Gap=5mil) (All),(All)
+   Violation between Clearance Constraint: (Collision < 5mil) Between Pad U1-20(2726.575mil,2551.615mil) on Top Layer And Track (2638.385mil,2551.615mil)(2726.575mil,2551.615mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 5mil) Between Pad U1-4(2423.425mil,2679.567mil) on Top Layer And Track (2423.425mil,2679.567mil)(2510.433mil,2679.567mil) on Top Layer 
+Rule Violations :2
+
+Processing Rule : Clearance Constraint (Gap=15mil) ((InPolygonClass('All Polygons'))),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Short-Circuit Constraint: Between Pad ANT2-1(2433.544mil,442.087mil) on Top Layer And Track (2256.381mil,442.084mil)(2433.547mil,442.084mil) on Top Layer Location : [X = 20935.176mil][Y = 19857.162mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-1(2433.544mil,442.087mil) on Top Layer And Track (2433.547mil,441.919mil)(2527.381mil,441.919mil) on Top Layer Location : [X = 20979.158mil][Y = 19856.997mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-1(2433.544mil,442.087mil) on Top Layer And Track (2433.547mil,442.084mil)(2433.547mil,535.919mil) on Top Layer Location : [X = 20957.169mil][Y = 19879.155mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-2(2433.544mil,264.922mil) on Top Layer And Track (2256.381mil,264.919mil)(2527.381mil,264.919mil) on Top Layer Location : [X = 20957.165mil][Y = 19679.997mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-3(2433.544mil,87.756mil) on Top Layer And Track (2256.381mil,87.753mil)(2527.381mil,87.753mil) on Top Layer Location : [X = 20957.165mil][Y = 19502.831mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-4(2256.378mil,442.087mil) on Top Layer And Track (2079.216mil,442.084mil)(2256.381mil,442.084mil) on Top Layer Location : [X = 20758.01mil][Y = 19857.162mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-4(2256.378mil,442.087mil) on Top Layer And Track (2255.381mil,264.919mil)(2255.381mil,440.919mil) on Top Layer Location : [X = 20779.003mil][Y = 19834.59mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-4(2256.378mil,442.087mil) on Top Layer And Track (2256.381mil,442.084mil)(2256.381mil,535.919mil) on Top Layer Location : [X = 20780.003mil][Y = 19879.155mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-4(2256.378mil,442.087mil) on Top Layer And Track (2256.381mil,442.084mil)(2433.547mil,442.084mil) on Top Layer Location : [X = 20801.993mil][Y = 19857.162mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-5(2256.378mil,264.922mil) on Top Layer And Track (2255.381mil,264.919mil)(2255.381mil,440.919mil) on Top Layer Location : [X = 20779.003mil][Y = 19701.99mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-5(2256.378mil,264.922mil) on Top Layer And Track (2255.381mil,264.919mil)(2256.381mil,264.919mil) on Top Layer Location : [X = 20779.503mil][Y = 19679.997mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-5(2256.378mil,264.922mil) on Top Layer And Track (2256.381mil,264.919mil)(2527.381mil,264.919mil) on Top Layer Location : [X = 20801.993mil][Y = 19679.997mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-5(2256.378mil,264.922mil) on Top Layer And Track (2256.381mil,87.753mil)(2256.381mil,264.919mil) on Top Layer Location : [X = 20780.003mil][Y = 19658.007mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-6(2256.378mil,87.756mil) on Top Layer And Track (2079.216mil,87.753mil)(2256.381mil,87.753mil) on Top Layer Location : [X = 20758.01mil][Y = 19502.831mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-6(2256.378mil,87.756mil) on Top Layer And Track (2256.381mil,87.753mil)(2256.381mil,264.919mil) on Top Layer Location : [X = 20780.003mil][Y = 19524.824mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-6(2256.378mil,87.756mil) on Top Layer And Track (2256.381mil,87.753mil)(2527.381mil,87.753mil) on Top Layer Location : [X = 20801.993mil][Y = 19502.831mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-7(2079.213mil,442.087mil) on Top Layer And Track (1952.381mil,442.084mil)(2079.216mil,442.084mil) on Top Layer Location : [X = 20580.845mil][Y = 19857.162mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-7(2079.213mil,442.087mil) on Top Layer And Track (2079.216mil,442.084mil)(2079.216mil,535.919mil) on Top Layer Location : [X = 20602.838mil][Y = 19879.155mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-7(2079.213mil,442.087mil) on Top Layer And Track (2079.216mil,442.084mil)(2256.381mil,442.084mil) on Top Layer Location : [X = 20624.827mil][Y = 19857.162mil]
+   Violation between Short-Circuit Constraint: Between Pad ANT2-9(2079.213mil,87.756mil) on Top Layer And Track (2079.216mil,87.753mil)(2256.381mil,87.753mil) on Top Layer Location : [X = 20624.827mil][Y = 19502.831mil]
+   Violation between Short-Circuit Constraint: Between Pad U1-20(2726.575mil,2551.615mil) on Top Layer And Track (2638.385mil,2551.615mil)(2726.575mil,2551.615mil) on Top Layer Location : [X = 21238.727mil][Y = 21966.693mil]
+   Violation between Short-Circuit Constraint: Between Pad U1-4(2423.425mil,2679.567mil) on Top Layer And Track (2423.425mil,2679.567mil)(2510.433mil,2679.567mil) on Top Layer Location : [X = 20958.517mil][Y = 22094.645mil]
+Rule Violations :22
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net VIN Between Pad U1-4(2423.425mil,2679.567mil) on Top Layer And Pad U1-20(2726.575mil,2551.615mil) on Top Layer 
+Rule Violations :1
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (ISVIA)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=20mil) (Air Gap=20mil) (Entries=4) (All)
+Rule Violations :0
+
+
+Violations Detected : 25
+Waived Violations : 0
+Time Elapsed        : 00:00:03

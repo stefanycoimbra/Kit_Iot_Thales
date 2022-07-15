@@ -1,0 +1,387 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD21\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">15/07/2022</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:07:38</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:03</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc" class="file"><acronym title="D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc">D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">25</td></tr>
+</table>
+</td>
+</table><a name="IDBEOUV3WQV5BOIMO2YMSK321KSIQMGO3BF1YDITPNURWTYLCH2FEL"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAKUAD3JSN2RGBYURQNG2HB0KLDEVB3REQSCCS2M1LABQ5M1SHM0C">Clearance Constraint (Gap=5mil) (All),(All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDON53BLDA4YHZGPCMHHWKJURPYKEERULJCHRIVVBQQ0UI1KYLAWB">Clearance Constraint (Gap=15mil) ((InPolygonClass('All Polygons'))),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFBGPBDD3EQHXDFFW2LIZRDUOGL4FBIHMNPUQ0NEF02ZVH105YAUF">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">22</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDMFE4BFKMVRS3G05U1Y5WYQIES5UCEERUNMBNXDXUKPA1P1OX0YM">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLGNWABLJFWU2C5UY1TQJ1YEWLN5FVO2ZXTGSEZKQUT3UVUCXQGHG">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKNVJFYEBYKFBM01U3ED4VS3ABIUDZWEVJURQVYNU5EGEO34KCDYC">Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (ISVIA)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID12UOB4CJJA5WPLET1ZOGPZ2SFJPOPV3I1SUTXHFW4VVWHTBPOF5J">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=20mil) (Air Gap=20mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">25</td>
+</tr>
+</table><br><a name="IDAKUAD3JSN2RGBYURQNG2HB0KLDEVB3REQSCCS2M1LABQ5M1SHM0C"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=5mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=21218.03mil|Location2.X=21222.363mil|Location1.Y=21964.526mil|Location2.Y=21968.859mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=21218.03mil|Location2.X=21222.363mil|Location1.Y=21964.526mil|Location2.Y=21968.859mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U1-20(2726.575mil,2551.615mil) on Top Layer And Track (2638.385mil,2551.615mil)(2726.575mil,2551.615mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20944.88mil|Location2.X=20949.214mil|Location1.Y=22092.479mil|Location2.Y=22096.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20944.88mil|Location2.X=20949.214mil|Location1.Y=22092.479mil|Location2.Y=22096.812mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U1-4(2423.425mil,2679.567mil) on Top Layer And Track (2423.425mil,2679.567mil)(2510.433mil,2679.567mil) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDFBGPBDD3EQHXDFFW2LIZRDUOGL4FBIHMNPUQ0NEF02ZVH105YAUF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20893.663mil|Location2.X=20976.689mil|Location1.Y=19815.649mil|Location2.Y=19898.675mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20893.663mil|Location2.X=20976.689mil|Location1.Y=19815.649mil|Location2.Y=19898.675mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-1(2433.544mil,442.087mil) on Top Layer And Track (2256.381mil,442.084mil)(2433.547mil,442.084mil) on Top Layer Location : [X = 20935.176mil][Y = 19857.162mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20937.648mil|Location2.X=21020.668mil|Location1.Y=19815.487mil|Location2.Y=19898.507mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20937.648mil|Location2.X=21020.668mil|Location1.Y=19815.487mil|Location2.Y=19898.507mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-1(2433.544mil,442.087mil) on Top Layer And Track (2433.547mil,441.919mil)(2527.381mil,441.919mil) on Top Layer Location : [X = 20979.158mil][Y = 19856.997mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20915.656mil|Location2.X=20998.681mil|Location1.Y=19837.642mil|Location2.Y=19920.668mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20915.656mil|Location2.X=20998.681mil|Location1.Y=19837.642mil|Location2.Y=19920.668mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-1(2433.544mil,442.087mil) on Top Layer And Track (2433.547mil,442.084mil)(2433.547mil,535.919mil) on Top Layer Location : [X = 20957.169mil][Y = 19879.155mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20894.717mil|Location2.X=21019.614mil|Location1.Y=19617.549mil|Location2.Y=19742.445mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20894.717mil|Location2.X=21019.614mil|Location1.Y=19617.549mil|Location2.Y=19742.445mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-2(2433.544mil,264.922mil) on Top Layer And Track (2256.381mil,264.919mil)(2527.381mil,264.919mil) on Top Layer Location : [X = 20957.165mil][Y = 19679.997mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20894.717mil|Location2.X=21019.614mil|Location1.Y=19440.383mil|Location2.Y=19565.28mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20894.717mil|Location2.X=21019.614mil|Location1.Y=19440.383mil|Location2.Y=19565.28mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-3(2433.544mil,87.756mil) on Top Layer And Track (2256.381mil,87.753mil)(2527.381mil,87.753mil) on Top Layer Location : [X = 20957.165mil][Y = 19502.831mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20716.497mil|Location2.X=20799.523mil|Location1.Y=19815.649mil|Location2.Y=19898.675mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20716.497mil|Location2.X=20799.523mil|Location1.Y=19815.649mil|Location2.Y=19898.675mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-4(2256.378mil,442.087mil) on Top Layer And Track (2079.216mil,442.084mil)(2256.381mil,442.084mil) on Top Layer Location : [X = 20758.01mil][Y = 19857.162mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20738.033mil|Location2.X=20819.974mil|Location1.Y=19793.619mil|Location2.Y=19875.56mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20738.033mil|Location2.X=20819.974mil|Location1.Y=19793.619mil|Location2.Y=19875.56mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-4(2256.378mil,442.087mil) on Top Layer And Track (2255.381mil,264.919mil)(2255.381mil,440.919mil) on Top Layer Location : [X = 20779.003mil][Y = 19834.59mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20738.49mil|Location2.X=20821.516mil|Location1.Y=19837.642mil|Location2.Y=19920.668mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20738.49mil|Location2.X=20821.516mil|Location1.Y=19837.642mil|Location2.Y=19920.668mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-4(2256.378mil,442.087mil) on Top Layer And Track (2256.381mil,442.084mil)(2256.381mil,535.919mil) on Top Layer Location : [X = 20780.003mil][Y = 19879.155mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20760.483mil|Location2.X=20843.503mil|Location1.Y=19815.652mil|Location2.Y=19898.672mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20760.483mil|Location2.X=20843.503mil|Location1.Y=19815.652mil|Location2.Y=19898.672mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-4(2256.378mil,442.087mil) on Top Layer And Track (2256.381mil,442.084mil)(2433.547mil,442.084mil) on Top Layer Location : [X = 20801.993mil][Y = 19857.162mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20737.49mil|Location2.X=20820.516mil|Location1.Y=19660.477mil|Location2.Y=19743.502mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20737.49mil|Location2.X=20820.516mil|Location1.Y=19660.477mil|Location2.Y=19743.502mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-5(2256.378mil,264.922mil) on Top Layer And Track (2255.381mil,264.919mil)(2255.381mil,440.919mil) on Top Layer Location : [X = 20779.003mil][Y = 19701.99mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20756.331mil|Location2.X=20802.676mil|Location1.Y=19656.824mil|Location2.Y=19703.169mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20756.331mil|Location2.X=20802.676mil|Location1.Y=19656.824mil|Location2.Y=19703.169mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-5(2256.378mil,264.922mil) on Top Layer And Track (2255.381mil,264.919mil)(2256.381mil,264.919mil) on Top Layer Location : [X = 20779.503mil][Y = 19679.997mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20760.483mil|Location2.X=20843.503mil|Location1.Y=19638.487mil|Location2.Y=19721.507mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20760.483mil|Location2.X=20843.503mil|Location1.Y=19638.487mil|Location2.Y=19721.507mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-5(2256.378mil,264.922mil) on Top Layer And Track (2256.381mil,264.919mil)(2527.381mil,264.919mil) on Top Layer Location : [X = 20801.993mil][Y = 19679.997mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20738.493mil|Location2.X=20821.513mil|Location1.Y=19616.497mil|Location2.Y=19699.517mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20738.493mil|Location2.X=20821.513mil|Location1.Y=19616.497mil|Location2.Y=19699.517mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-5(2256.378mil,264.922mil) on Top Layer And Track (2256.381mil,87.753mil)(2256.381mil,264.919mil) on Top Layer Location : [X = 20780.003mil][Y = 19658.007mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20716.497mil|Location2.X=20799.523mil|Location1.Y=19461.319mil|Location2.Y=19544.344mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20716.497mil|Location2.X=20799.523mil|Location1.Y=19461.319mil|Location2.Y=19544.344mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-6(2256.378mil,87.756mil) on Top Layer And Track (2079.216mil,87.753mil)(2256.381mil,87.753mil) on Top Layer Location : [X = 20758.01mil][Y = 19502.831mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20738.49mil|Location2.X=20821.516mil|Location1.Y=19483.311mil|Location2.Y=19566.337mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20738.49mil|Location2.X=20821.516mil|Location1.Y=19483.311mil|Location2.Y=19566.337mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-6(2256.378mil,87.756mil) on Top Layer And Track (2256.381mil,87.753mil)(2256.381mil,264.919mil) on Top Layer Location : [X = 20780.003mil][Y = 19524.824mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20760.483mil|Location2.X=20843.503mil|Location1.Y=19461.321mil|Location2.Y=19544.341mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20760.483mil|Location2.X=20843.503mil|Location1.Y=19461.321mil|Location2.Y=19544.341mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-6(2256.378mil,87.756mil) on Top Layer And Track (2256.381mil,87.753mil)(2527.381mil,87.753mil) on Top Layer Location : [X = 20801.993mil][Y = 19502.831mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20539.332mil|Location2.X=20622.358mil|Location1.Y=19815.649mil|Location2.Y=19898.675mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20539.332mil|Location2.X=20622.358mil|Location1.Y=19815.649mil|Location2.Y=19898.675mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-7(2079.213mil,442.087mil) on Top Layer And Track (1952.381mil,442.084mil)(2079.216mil,442.084mil) on Top Layer Location : [X = 20580.845mil][Y = 19857.162mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20561.325mil|Location2.X=20644.351mil|Location1.Y=19837.642mil|Location2.Y=19920.668mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20561.325mil|Location2.X=20644.351mil|Location1.Y=19837.642mil|Location2.Y=19920.668mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-7(2079.213mil,442.087mil) on Top Layer And Track (2079.216mil,442.084mil)(2079.216mil,535.919mil) on Top Layer Location : [X = 20602.838mil][Y = 19879.155mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20583.318mil|Location2.X=20666.337mil|Location1.Y=19815.652mil|Location2.Y=19898.672mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20583.318mil|Location2.X=20666.337mil|Location1.Y=19815.652mil|Location2.Y=19898.672mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-7(2079.213mil,442.087mil) on Top Layer And Track (2079.216mil,442.084mil)(2256.381mil,442.084mil) on Top Layer Location : [X = 20624.827mil][Y = 19857.162mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20583.318mil|Location2.X=20666.337mil|Location1.Y=19461.321mil|Location2.Y=19544.341mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20583.318mil|Location2.X=20666.337mil|Location1.Y=19461.321mil|Location2.Y=19544.341mil|Absolute=True">Short-Circuit Constraint: Between Pad ANT2-9(2079.213mil,87.756mil) on Top Layer And Track (2079.216mil,87.753mil)(2256.381mil,87.753mil) on Top Layer Location : [X = 20624.827mil][Y = 19502.831mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=21217.397mil|Location2.X=21260.056mil|Location1.Y=21945.363mil|Location2.Y=21988.022mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=21217.397mil|Location2.X=21260.056mil|Location1.Y=21945.363mil|Location2.Y=21988.022mil|Absolute=True">Short-Circuit Constraint: Between Pad U1-20(2726.575mil,2551.615mil) on Top Layer And Track (2638.385mil,2551.615mil)(2726.575mil,2551.615mil) on Top Layer Location : [X = 21238.727mil][Y = 21966.693mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20937.187mil|Location2.X=20979.846mil|Location1.Y=22073.316mil|Location2.Y=22115.975mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20937.187mil|Location2.X=20979.846mil|Location1.Y=22073.316mil|Location2.Y=22115.975mil|Absolute=True">Short-Circuit Constraint: Between Pad U1-4(2423.425mil,2679.567mil) on Top Layer And Track (2423.425mil,2679.567mil)(2510.433mil,2679.567mil) on Top Layer Location : [X = 20958.517mil][Y = 22094.645mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDMFE4BFKMVRS3G05U1Y5WYQIES5UCEERUNMBNXDXUKPA1P1OX0YM"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20917.047mil|Location2.X=21280.197mil|Location1.Y=21959.193mil|Location2.Y=22102.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\PSU-Thales\Kit_Iot_Thales\sibb\58.13.0094_400_Rev00\58.13.0094_400_Rev00.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20917.047mil|Location2.X=21280.197mil|Location1.Y=21959.193mil|Location2.Y=22102.145mil|Absolute=True">Un-Routed Net Constraint: Net VIN Between Pad U1-4(2423.425mil,2679.567mil) on Top Layer And Pad U1-20(2726.575mil,2551.615mil) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
