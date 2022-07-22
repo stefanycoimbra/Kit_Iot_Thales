@@ -1,0 +1,877 @@
+[
+    {
+        "id": "d8f3915c89927bbc",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "32d8dc0bdfbb58f4",
+        "type": "mqtt in",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "topic": "Thales/testejson",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "80389e84cc1b15b7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 100,
+        "y": 180,
+        "wires": [
+            [
+                "00a6ee64e9790938"
+            ]
+        ]
+    },
+    {
+        "id": "307ea454cca4162f",
+        "type": "ui_gauge",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "group": "3cdfca4dbf14ac82",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{payload.t}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "30",
+        "seg2": "50",
+        "className": "",
+        "x": 430,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b2902b4c7f36a8d5",
+        "type": "ui_text",
+        "z": "d8f3915c89927bbc",
+        "group": "9a13c93ca09b0f92",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Giroscópio X (°/s):",
+        "format": "{{payload.gx}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 450,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "183e88160d0e4a55",
+        "type": "ui_text",
+        "z": "d8f3915c89927bbc",
+        "group": "9a13c93ca09b0f92",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Giroscópio Y (°/s):",
+        "format": "{{payload.gy}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 450,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "d102790e3e71364c",
+        "type": "ui_text",
+        "z": "d8f3915c89927bbc",
+        "group": "9a13c93ca09b0f92",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Giroscópio Z (°/s):",
+        "format": "{{payload.gz}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 450,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "9839d7ef8e6be986",
+        "type": "ui_gauge",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "group": "9a13c93ca09b0f92",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Altitude",
+        "label": "m",
+        "format": "{{payload.a}}",
+        "min": 0,
+        "max": "2000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 420,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "fa0b1be4cfeee3f8",
+        "type": "function",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "func": "var obj = {\n    \"temperatura\":89,\n    \"Altitude\":1000,\n    \"umidade\":34,\n    \"pressao\":93564,\n    \"gX\":\"Vitor\",\n    \"gY\":-2.584,\n    \"gZ\":10.548\n}\nmsg.payload = obj;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 100,
+        "wires": [
+            [
+                "3d5bbf25cd7fbc00"
+            ]
+        ]
+    },
+    {
+        "id": "179d570f2129a401",
+        "type": "inject",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "fa0b1be4cfeee3f8"
+            ]
+        ]
+    },
+    {
+        "id": "892e67f850dfa190",
+        "type": "ui_gauge",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "group": "3cdfca4dbf14ac82",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "compass",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{payload.h}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 420,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ea86c2351a388f67",
+        "type": "mqtt out",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "topic": "Thales/testejson",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "80389e84cc1b15b7",
+        "x": 480,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "8229bd8382d86e6b",
+        "type": "mongodb out",
+        "z": "d8f3915c89927bbc",
+        "mongodb": "83ddb80d0f4e52e6",
+        "name": "Teste01",
+        "collection": "Temperatura",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 580,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "6326d40906bbe98b",
+        "type": "mongodb out",
+        "z": "d8f3915c89927bbc",
+        "mongodb": "83ddb80d0f4e52e6",
+        "name": "Teste01",
+        "collection": "Pressão",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 580,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "a05e6e27ac323088",
+        "type": "mongodb out",
+        "z": "d8f3915c89927bbc",
+        "mongodb": "83ddb80d0f4e52e6",
+        "name": "Teste01",
+        "collection": "Umidade",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 580,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "cd76079ccf47a3f8",
+        "type": "mongodb out",
+        "z": "d8f3915c89927bbc",
+        "mongodb": "83ddb80d0f4e52e6",
+        "name": "Teste01",
+        "collection": "Giroscópio Y",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 580,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "1906b9ac12b09c3e",
+        "type": "mongodb out",
+        "z": "d8f3915c89927bbc",
+        "mongodb": "83ddb80d0f4e52e6",
+        "name": "Teste01",
+        "collection": "Altitude",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 580,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "956eecdd0b0ddf06",
+        "type": "mongodb out",
+        "z": "d8f3915c89927bbc",
+        "mongodb": "83ddb80d0f4e52e6",
+        "name": "Teste01",
+        "collection": "Giroscópio X",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 580,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "92fa31466f24fa6a",
+        "type": "function",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "func": "msg.payload = msg.payload.t;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 460,
+        "wires": [
+            [
+                "cd4532a3879d1534"
+            ]
+        ]
+    },
+    {
+        "id": "00a6ee64e9790938",
+        "type": "json",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 270,
+        "y": 180,
+        "wires": [
+            [
+                "45beda97795ce24c",
+                "307ea454cca4162f",
+                "892e67f850dfa190",
+                "9839d7ef8e6be986",
+                "b2902b4c7f36a8d5",
+                "183e88160d0e4a55",
+                "d102790e3e71364c"
+            ]
+        ]
+    },
+    {
+        "id": "45beda97795ce24c",
+        "type": "debug",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "3d5bbf25cd7fbc00",
+        "type": "debug",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "2df04a1932155eea",
+        "type": "mqtt in",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "topic": "Thales/testejson",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "80389e84cc1b15b7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 100,
+        "y": 460,
+        "wires": [
+            [
+                "eb85f0fdec9f3776"
+            ]
+        ]
+    },
+    {
+        "id": "eb85f0fdec9f3776",
+        "type": "json",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 270,
+        "y": 460,
+        "wires": [
+            [
+                "92fa31466f24fa6a"
+            ]
+        ]
+    },
+    {
+        "id": "cd4532a3879d1534",
+        "type": "debug",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "1c339a40dacdce6c",
+        "type": "function",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "func": "msg.payload = msg.payload.t;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 500,
+        "wires": [
+            [
+                "8229bd8382d86e6b"
+            ]
+        ]
+    },
+    {
+        "id": "fead0c84c418ffe5",
+        "type": "function",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "func": "msg.payload = msg.payload.p;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 560,
+        "wires": [
+            [
+                "6326d40906bbe98b"
+            ]
+        ]
+    },
+    {
+        "id": "53de9084c51f3ea7",
+        "type": "function",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "func": "msg.payload = msg.payload.h;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 620,
+        "wires": [
+            [
+                "a05e6e27ac323088"
+            ]
+        ]
+    },
+    {
+        "id": "becab6ee6378bb04",
+        "type": "function",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "func": "msg.payload = msg.payload.a;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 680,
+        "wires": [
+            [
+                "1906b9ac12b09c3e"
+            ]
+        ]
+    },
+    {
+        "id": "2beb2eb33df90d21",
+        "type": "function",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "func": "msg.payload = msg.payload.gx;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 740,
+        "wires": [
+            [
+                "956eecdd0b0ddf06"
+            ]
+        ]
+    },
+    {
+        "id": "2ae3ce49519f9567",
+        "type": "function",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "func": "msg.payload = msg.payload.gy;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 800,
+        "wires": [
+            [
+                "cd76079ccf47a3f8"
+            ]
+        ]
+    },
+    {
+        "id": "c922c483a5579e68",
+        "type": "mongodb out",
+        "z": "d8f3915c89927bbc",
+        "mongodb": "83ddb80d0f4e52e6",
+        "name": "Teste01",
+        "collection": "Giroscópio Z",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 580,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "4b56e0521cb4a6b8",
+        "type": "function",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "func": "msg.payload = msg.payload.gz;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 860,
+        "wires": [
+            [
+                "c922c483a5579e68"
+            ]
+        ]
+    },
+    {
+        "id": "9833e1ce9ecc1aa2",
+        "type": "mongodb out",
+        "z": "d8f3915c89927bbc",
+        "mongodb": "83ddb80d0f4e52e6",
+        "name": "Teste01",
+        "collection": "Acelerômetro X",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 580,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "443515cd95b68013",
+        "type": "function",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "func": "msg.payload = msg.payload.ax;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 920,
+        "wires": [
+            [
+                "9833e1ce9ecc1aa2"
+            ]
+        ]
+    },
+    {
+        "id": "5ad1d06364034fb9",
+        "type": "mongodb out",
+        "z": "d8f3915c89927bbc",
+        "mongodb": "83ddb80d0f4e52e6",
+        "name": "Teste01",
+        "collection": "Acelerêmetro Y",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 580,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "dd49eca8ce0189ad",
+        "type": "function",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "func": "msg.payload = msg.payload.ay;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 980,
+        "wires": [
+            [
+                "5ad1d06364034fb9"
+            ]
+        ]
+    },
+    {
+        "id": "1b4d0747d96f563f",
+        "type": "mongodb out",
+        "z": "d8f3915c89927bbc",
+        "mongodb": "83ddb80d0f4e52e6",
+        "name": "Teste01",
+        "collection": "Acelerômetro Z",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 580,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "c7d6fc0087d316d8",
+        "type": "function",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "func": "msg.payload = msg.payload.az;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1040,
+        "wires": [
+            [
+                "1b4d0747d96f563f"
+            ]
+        ]
+    },
+    {
+        "id": "ba7115c8e85c311c",
+        "type": "mongodb out",
+        "z": "d8f3915c89927bbc",
+        "mongodb": "83ddb80d0f4e52e6",
+        "name": "Teste01",
+        "collection": "Magnetômetro",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 580,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "b0e9264601ea1319",
+        "type": "function",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "func": "msg.payload = msg.payload.mx;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1100,
+        "wires": [
+            [
+                "ba7115c8e85c311c"
+            ]
+        ]
+    },
+    {
+        "id": "b3119a98f7da9cf9",
+        "type": "mongodb out",
+        "z": "d8f3915c89927bbc",
+        "mongodb": "83ddb80d0f4e52e6",
+        "name": "Teste01",
+        "collection": "Magnetômetro Y",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 580,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "0bdc3092cd12cff5",
+        "type": "function",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "func": "msg.payload = msg.payload.my;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1160,
+        "wires": [
+            [
+                "b3119a98f7da9cf9"
+            ]
+        ]
+    },
+    {
+        "id": "7a24569250a8eaba",
+        "type": "mongodb out",
+        "z": "d8f3915c89927bbc",
+        "mongodb": "83ddb80d0f4e52e6",
+        "name": "Teste01",
+        "collection": "Magnetômetro Z",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 580,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "7b243131308f5154",
+        "type": "function",
+        "z": "d8f3915c89927bbc",
+        "name": "",
+        "func": "msg.payload = msg.payload.mz;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1220,
+        "wires": [
+            [
+                "7a24569250a8eaba"
+            ]
+        ]
+    },
+    {
+        "id": "80389e84cc1b15b7",
+        "type": "mqtt-broker",
+        "name": "Mosquitto",
+        "broker": "broker.emqx.io",
+        "port": "8884",
+        "clientid": "",
+        "usetls": true,
+        "tls": "cc1a1857184279b9",
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "cc1a1857184279b9",
+        "type": "tls-config",
+        "name": "",
+        "cert": "./server.crt",
+        "key": "./server.key",
+        "ca": "./ca.crt",
+        "certname": "server.crt",
+        "keyname": "server.key",
+        "caname": "ca.crt",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "3cdfca4dbf14ac82",
+        "type": "ui_group",
+        "name": "",
+        "tab": "d1ae09c177dd2dd1",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9a13c93ca09b0f92",
+        "type": "ui_group",
+        "name": "",
+        "tab": "d1ae09c177dd2dd1",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "83ddb80d0f4e52e6",
+        "type": "mongodb",
+        "hostname": "localhost:27017",
+        "topology": "direct",
+        "connectOptions": "",
+        "port": "27017",
+        "db": "Thales",
+        "name": ""
+    },
+    {
+        "id": "d1ae09c177dd2dd1",
+        "type": "ui_tab",
+        "name": "THALES",
+        "icon": "",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
